@@ -36,7 +36,7 @@ class FolioProvider {
   static const Name = 'Name';
   static const Desc = 'Desc';
   Database db;
-  static const CREATE = '''CREATE TABLE $Table (
+  static const CREATE = '''CREATE TABLE  IF NOT EXISTS $Table (
       $Id INTEGER PRIMARY KEY AUTOINCREMENT,
        $Name TEXT  NOT NULL,
         $Desc TEXT
